@@ -1,0 +1,71 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 2rem 1rem;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo p {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 25ch;
+    padding: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* .courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.4rem;
+}
+
+.courses h1 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.course-details {
+    padding-left: 0.4rem;
+    line-height: 0.8rem;
+} */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-links h2 {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    padding-left: .3rem;
+}
+
+.footer-link {
+    padding-left: 0.4rem;
+}
+
+@media (max-width:540px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .logo p {
+        width: 90vw;
+    }
+}

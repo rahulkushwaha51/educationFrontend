@@ -1,0 +1,260 @@
+.header {
+  background-color: rgba(13, 14, 13, 0.352);
+  background-image: url("../assets/home.jpg");
+  object-fit: contain;
+  background-position: center;
+  background-size: 100% 100%;
+  background-blend-mode: multiply;
+  color: var(--background-color-primary);
+  /* display: flex;
+  align-items: center; */
+  padding: 10rem 5rem;
+  /* text-align: center; */
+}
+
+.info {
+  text-align: center;
+}
+
+.info h1 {
+  line-height: 5rem;
+  font-size: 5rem;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  /* color: rgb(14, 64, 108); */
+}
+
+.info a {
+  font-size: 2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  /* background-color: rgb(43, 101, 225); */
+}
+
+.info p {
+  max-width: 65ch;
+  white-space: wrap;
+  font-size: 1.2rem;
+}
+
+.home-intro {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  gap: 1rem;
+  padding: 3rem 5rem;
+  transform: translateX(-100%);
+  transition: transform 3s ease-in-out;
+}
+
+.home-intro.active {
+  transform: translateX(0);
+}
+
+.home-intro h2 {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  padding: 0.5rem 1rem;
+  width: 33%;
+}
+
+.home-intro p {
+  padding: 0 1rem;
+  width: 33%;
+}
+
+.home-intro img {
+  width: 33%;
+}
+
+.home-courses {
+  background-color: rgba(198, 192, 192, 0.171);
+  padding-bottom: 2rem;
+}
+
+.home-courses-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5.5rem;
+
+}
+
+.home-courses-heading h2{
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+.home-card {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  min-height: 25rem;
+  width: 25rem;
+  background-color: rgba(255, 255, 255, 0.717);
+  box-shadow: 0 4px 12px rgba(212, 209, 209, 0.329);
+  border-radius: 0.5rem;
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card span {
+  background-color: var(--color-category);
+  color: white;
+  width: max-content;
+  padding: 0 0.5rem;
+  margin: 1.5rem 0 0 2rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  padding: 0.5rem 2rem;
+  text-align: left;
+}
+
+.course-price {
+  font-size: 1.4rem;
+  padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+.course-price small {
+  position: relative;
+
+}
+
+.course-price small:nth-child(1) {
+  color: rgb(14, 163, 222);
+  font-weight: bold;
+  padding-right: 0.5rem;
+}
+
+.course-price small:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(22, 23, 22, 0.527);
+  top: 50%;
+
+}
+
+.card h3 {
+  padding: 0.9rem 2rem;
+  text-align: left;
+}
+
+.home-card-action {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  /* margin: 1rem 2rem; */
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.home-card-action span {
+  display: flex;
+  gap: 0.5rem;
+  font-size: medium;
+  align-items: center;
+  padding: 0;
+  margin: -1rem 0;
+  background-color: white;
+  color: var(--background-color-secondry);
+}
+
+.cutoff-text1 {
+  --max-lines: 1;
+  --line-height: 1.8;
+  overflow: hidden;
+  max-height: calc(var(--max-lines)*1em*var(--line-height));
+  /* line-height: var(--line-height); */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 10rem;
+  }
+
+  .info h1 {
+    font-size: 2rem;
+    line-height: 3.1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5rem 0;
+
+  }
+
+  .info h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-intro {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .home-intro h2 {
+    width: 100%;
+  }
+
+  .home-intro p {
+    width: 100%;
+  }
+
+  .home-intro img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .courses-container {
+    flex-direction: column;
+  }
+  .home-courses{
+    padding: 0 1rem;
+  }
+  .home-courses-heading{
+    padding: 1rem 0;
+  }
+  .home-courses-heading h2{
+    font-size: 1.4rem;
+  }
+
+  .home-card {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

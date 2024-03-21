@@ -1,0 +1,63 @@
+/* Lectures.css */
+
+/* Common styles */
+.lecture-container {
+    display: flex;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+}
+
+.video-container {
+    width: 90%;
+    flex: 3;
+    padding: 1rem 2rem;
+}
+
+.video-container p {
+    padding: .2rem 0 1rem;
+}
+
+.lectures {
+    flex: 1;
+    background-color: aliceblue;
+    padding: 0 1rem;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lecture-button {
+    width: 90%;
+    padding: 1.5rem .5rem;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.not-found {
+    text-align: center;
+    padding: 5rem;
+    font-size: 2rem;
+}
+
+.not-found h1 {
+    padding: 1rem;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .lecture-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container {
+        flex: 1;
+        padding: 0.2rem;
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,33 @@
+.payment-card {
+    min-height: 20rem;
+    width: fit-content;
+    margin: auto;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.payment-card h1 {
+    background-color: var(--color-third);
+    padding: 2rem 0;
+}
+
+.payment-card h2 {
+    padding-top: 1rem;
+    font-size: 4rem;
+   display: flex;
+   justify-content: center;
+}
+
+.payment-card p{
+    padding: 0 1rem;
+}
+.payment-card h3{
+    padding: 2rem;
+    background-color: var(--color-third);
+}
+.payment-card b{
+    padding: 0 0.5rem;
+}
+.payment-card button {
+    margin: 1rem 0;
+}

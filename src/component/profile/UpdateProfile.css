@@ -1,0 +1,44 @@
+.change-profile {
+
+    padding-top: 2rem;
+    width: 100%;
+    height: max-content;
+}
+
+.change-profile h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+}
+
+.profile-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-form input {
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &:focus {
+        border-color: gray;
+    }
+}
+
+.profile-form button {
+    width: 50%;
+}
+
+@media (max-width:768px){
+    .profile-form input,.profile-form button{
+        width: 100%;
+    }
+}

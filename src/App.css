@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+:root {
+    --background-color-primary: rgb(255, 255, 255);
+    --background-color-body: rgba(232, 229, 229, 0.459);
+    --background-color-secondry: rgb(0, 0, 0);
+    --color-primary: blueviolet;
+    --color-secondry: rgb(19, 3, 244);
+    --color-secondry: rgb(19, 3, 244);
+    --color-third: rgb(219, 219, 18);
+    --color-shadow: rgba(196, 189, 189, 0.573);
+    --color-category: darkcyan;
+}
+
+body {
+    background-color: rgba(184, 26, 26, 0.459);
+    /* background-color: var(--background-color-body); */
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--background-color-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondry)
+}
+
+.btn-secondry {
+    background-color: var(--color-secondry);
+    color: var(--background-color-primary);
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+}
+
+.btn-secondry:hover {
+    background-color: var(--color-primary);
+}
+
+.header {
+    background-color: rgba(13, 14, 13, 0.662);
+    background-image: url(../assets/coursepageimage.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 6rem 2rem;
+    color: white;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.header small {
+    font-size: 1.3rem;
+
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+/* input{
+    background-color: var(--background-color-body);
+} */
+
+@media (max-width:720px){
+    .header{
+        padding-left: 2rem;
+    }
+}

@@ -1,0 +1,40 @@
+.request{
+  text-align: center;
+}
+.request-form {
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .request-form h2 {
+    text-align: center;
+  }
+  
+  .request-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .request-form input,
+  .request-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .request-form button {
+    border: none;
+    margin-top:2rem ;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  @media (max-width: 540px) {
+    .request-form {
+      max-width: 85%;
+    }
+  }
+  

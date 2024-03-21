@@ -1,0 +1,266 @@
+/* Courses.css */
+.course-container {
+    min-height: 100dvh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--background-color-body);
+}
+
+
+.search {
+    padding: 2rem 5rem;
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.search h1 {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.078);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.search span {
+    padding-top: .3rem;
+}
+
+.search input {
+    border-radius: 4px;
+    padding: 1.5rem 1rem;
+    padding-right: 25%;
+    border: 1px solid rgba(0, 0, 0, 0.078);
+    background: var(--background-color-body);
+
+}
+
+.search-action {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.078);
+    border-radius: 4px;
+}
+
+.search-action span {
+    padding: 1.5rem;
+}
+
+.search-action button {
+    margin: 0.5rem 1rem;
+    padding: 0 3rem;
+}
+
+.content-box {
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    gap: 1rem
+}
+
+.filter {
+    display: flex;
+    flex: 0 0 auto;
+    width: 25%;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+    border-radius: 4px;
+}
+
+.dropdown {
+    position: relative;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: max-content;
+    padding: 1rem 0.5rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.078);
+    border-radius: 4px;
+}
+
+
+.filter-option {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.dropdown-btn {
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-content {
+    display: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+    flex-direction: column;
+    height: max-content;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+.label {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: rgb(198, 191, 191);
+    border-radius: 50%;
+}
+
+.label:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.label input:checked~.checkmark {
+    background-color: #2196f3;
+}
+
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+
+}
+
+.label input:checked~.checkmark::after {
+    display: block;
+}
+
+.label .checkmark::after {
+    top: 6.4px;
+    left: 6.4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+}
+
+.star {
+    display: flex;
+}
+
+.icon svg {
+    fill: rgb(7, 96, 169);
+    stroke-width: 2rem;
+    stroke: rgb(14, 195, 123);
+}
+
+.course-card {
+    /* position: absolute; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.course-card-row {
+    flex: 0 0 auto;
+    width: 33.33%;
+}
+
+@media (max-width: 768px) {
+    .courses-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .courses-header {
+        width: 100%;
+    }
+
+    .search {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+    }
+
+    .search-action {
+        width: 100%;
+    }
+
+    .content-box {
+        grid-template-columns: 1fr;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .filter {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .dropdown {
+        width: 100%;
+        padding: 0 .5rem;
+        margin: 0;
+    }
+
+    .filter-option {
+        padding: 0.5rem 0;
+        /* margin-bottom: 1rem; */
+    }
+
+    .course-card {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* @media (max-width:960px) {
+        .content-box {
+            flex-direction: column;
+        }
+
+        .dropdown {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .course-card {
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 0.5rem;
+        }
+
+        .course-card-row {
+            margin: 0;
+        }
+    } */
+}
