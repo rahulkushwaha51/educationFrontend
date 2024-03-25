@@ -13,6 +13,8 @@ const Cart = () => {
     const { user } = useSelector(state => state.user);
     const dispatch = useDispatch();
 
+  
+
     const handleCheckout = async (e,amount, orderId) => {
         e.preventDefault();
         await dispatch(checkout(amount));
@@ -70,7 +72,7 @@ const Cart = () => {
         <div className="cart-container">
             <h1 className="cart-heading">Your Cart</h1>
 
-            {(cart !== null) ? (
+             {(cart && cart !== null) ? (
                 <div className="cart-summary">
                     <h3>Cart Summary</h3>
 
@@ -86,7 +88,7 @@ const Cart = () => {
                             </tr>
                         </thead>
                         <tbody >
-                            {cart.items.map(item => (
+                            { cart.items.map(item => (
                                 <tr key={item._id} className="cart-item">
                                     <td className='col-item'> <img src={item.image} alt="course" />  </td>
                                     <td className='col-item'>{item.title}</td>

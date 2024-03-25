@@ -141,7 +141,7 @@ function Profile(props) {
                           <div className="course-level">
                             <span>
                               <FaClock fill="gray" /> {element.course.duration}{" "}
-                              hours{" "}
+                              month{" "}
                             </span>
                             <span>
                               <GiNetworkBars fill="gray" />{" "}

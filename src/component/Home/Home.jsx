@@ -23,7 +23,7 @@ const Home = () => {
       <div className="header">
         <div className="info">
           <h1>
-            <strong> Build Your Dream With Eduman</strong>{" "}
+            <strong> Build Your Dream With Gs Academy</strong>{" "}
           </h1>
           <Link to="/courses" className="btn-primary">
             Courses
@@ -32,9 +32,9 @@ const Home = () => {
         </div>
       </div>
       <div ref={ref} className={`home-intro ${inView ? "active" : ""}`}>
-        <h2>Welcome to Eduman Education Online Platform</h2>
+        <h2>Welcome to Gs Academy Education Online Platform</h2>
         <p>
-          Eduman helps you to develop essential education and your career of
+          Gs Academy helps you to develop essential education and your career of
           years experiences. Transform your life through education to make the
           most of each semester to choose the best major. Prepare for grad
           school. Whatever it is, you can do it here. Explore our igital

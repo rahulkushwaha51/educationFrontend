@@ -21,13 +21,13 @@ const CourseCard = ({
           <div className="front-card">
             <img src={image} alt="thumbnail" className="course-img" />
             <div className="course-price">
-              <span>{price}&#8377;</span>
-              <span>2999&#8377;</span>
+              <span>&#8377;{price}</span>
+              {/* <span>2999&#8377;</span> */}
             </div>
             <h1 className="title cutoff-text">{title}</h1>
             <div className="course-level">
               <span>
-                <FaClock /> {duration} hours{" "}
+                <FaClock /> {duration} month{" "}
               </span>
               <span>
                 <GiNetworkBars /> {level}{" "}

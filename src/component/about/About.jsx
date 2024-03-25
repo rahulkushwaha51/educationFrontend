@@ -14,17 +14,17 @@ const About = () => {
       </div>
       <div className="about-container">
         <div className="about-section">
-          <h2 className="about-heading">About Eduman</h2>
+          <h2 className="about-heading">About Gs Academy</h2>
           <p className="about-description">
-            Welcome to Eduman - your pathway to success in the digital era.
-            Founded in 2010, Eduman is a premier educational institution
+            Welcome to Gs Academy - your pathway to success in the digital era.
+            Founded in 2010, Gs Academy is a premier educational institution
             dedicated to providing top-notch training in computer science,
             coding, Tally, and spoken English. Our mission is to empower
             individuals with the skills and knowledge they need to thrive in
             today's competitive job market.
           </p>
           <p className="about-description">
-            At Eduman, we are committed to excellence in education. Our team
+            At Gs Academy, we are committed to excellence in education. Our team
             of experienced instructors brings a wealth of industry knowledge and
             expertise to the classroom, ensuring that our students receive
             high-quality instruction that is both relevant and practical.
@@ -40,7 +40,7 @@ const About = () => {
             marketable skills that employers demand.
           </p>
           <p className="about-description">
-            Join us at Eduman and unlock your potential. Let us help you
+            Join us at Gs Academy and unlock your potential. Let us help you
             achieve your goals and realize your dreams. Your journey to success
             starts here.
           </p>

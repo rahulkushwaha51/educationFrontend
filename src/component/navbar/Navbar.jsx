@@ -52,7 +52,7 @@ const Navbar = ({ isAuthenticated, user }) => {
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-      <img src={logo} className="logo" />
+
       <div>
         <ul className={`menu ${isOpen ? "open" : ""}`}>
           {links.map(({ id, link, path }) => (
@@ -63,38 +63,35 @@ const Navbar = ({ isAuthenticated, user }) => {
 
           {isAuthenticated ? (
             <>
-              <li>
-                <Link to="/profile" className="link">
-                  Profile
-                </Link>
+              <li className="link">
+                <Link to="/profile">Profile</Link>
               </li>
-              <li>
-                <Link to="/cart" className="link">
+              <li className="link btn-primary">
+                <Link to="/cart">
                   <FaShoppingCart />
                 </Link>
               </li>
 
-              <button className="btn-primary" onClick={logoutHandler}>
-                Logout
-              </button>
-              {user && user.role === "admin" && (
-                <Link to="/admin/dashboard">
-                  <button className="btn-primary">Dashboard</button>
-                </Link>
-              )}
+              <li className="link">
+                <button className="btn-primary" onClick={logoutHandler}>
+                  Logout
+                </button>
+              </li>
+              <li>
+                {user && user.role === "admin" && (
+                  <Link to="/admin/dashboard">
+                    <button className="btn-primary">Dashboard</button>
+                  </Link>
+                )}
+              </li>
             </>
           ) : (
             <>
-              <li>
-                <Link to="/login" className="link">
-                  Login
-                </Link>
+              <li className="link">
+                <Link to="/login">Login</Link>
               </li>
-              <li>
-                <Link to="/signup" className="link">
-                  {" "}
-                  Signup
-                </Link>
+              <li className="link">
+                <Link to="/signup"> Signup</Link>
               </li>
             </>
           )}

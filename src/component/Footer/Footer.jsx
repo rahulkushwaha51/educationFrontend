@@ -7,7 +7,8 @@ const Footer = () => {
     <footer>
       <div className="footer">
         <div className="logo">
-          <img src={logo} alt="eduman" />
+          {/* <img src={logo} alt="Gs Academy" /> */}
+          <h2>GsAcademy</h2>
           <p>
             We will not only assist you by taking classes but also the exact and
             pinpoint guidelines to make your preparation better and closer to
@@ -31,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="copyright">copyright@eduman</p>
+      <p className="copyright">copyright@Gs Academy</p>
     </footer>
   );
 };

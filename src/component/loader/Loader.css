@@ -1,6 +1,7 @@
 .loader {
     height: 100px;
     width: 100px;
+    margin: auto;
     border: 5px solid gray;
     border-radius: 50%;
     border-top-color: red;
