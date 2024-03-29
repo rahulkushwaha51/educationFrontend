@@ -56,7 +56,7 @@ const Dashboard = () => {
     subscriptionProfit,
     viewsProfit, } = useSelector(state => state.admin)
 
-    console.log(stats.CreatedAt)
+    console.log(subscriptionPercent)
 
   useEffect(() => {
     dispatch(getadminstats())

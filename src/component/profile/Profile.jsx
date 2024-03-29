@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Profile.css"; // You can create a new CSS file for styling
 import ChangePassword from "./ChangePassword";
-
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateprofilepicture } from "../../redux/actions/profileAction";
 import { getMyProfile } from "../../redux/actions/userAction";
 import UpdateProfile from "./UpdateProfile";
-
+import Header from '../general/Header'
 import toast from "react-hot-toast";
 import {
   Image,
@@ -61,15 +59,9 @@ function Profile(props) {
 
   return (
     <>
+    <Header link={"Home"} to={""} title={"Profile"} />
       {user && (
         <div className="profile">
-          <div className="header">
-            <h1> Profile</h1>
-            <span>
-              {" "}
-              <Link to="/">Home</Link> <small>&#8250;</small> Profile
-            </span>
-          </div>
           <div className="profile-image">
             <img src={user.avatar.url} alt="Profile" loading="lazy" />
             <div className="username">
@@ -136,7 +128,7 @@ function Profile(props) {
                           <div className="course-card-info">
                             <h2>{element.course.title}</h2>
                             <p>{element.course.description} </p>
-                            <div className="course-level">
+                            <div className="course-level-profile">
                               <span>
                                 <FaClock fill="gray" />{" "}
                                 {element.course.duration} month{" "}

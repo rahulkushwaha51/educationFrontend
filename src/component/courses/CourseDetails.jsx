@@ -8,6 +8,7 @@ import Accordion from "./Accordion";
 import { Globe, LayoutGrid, SlidersHorizontal } from "lucide-react";
 import { addToCart } from "../../redux/actions/cartAction";
 import { CiBookmark } from "react-icons/ci";
+import Header from "../general/Header";
 const CourseDetails = () => {
   const dispatch = useDispatch();
   const params = useParams();
@@ -21,7 +22,6 @@ const CourseDetails = () => {
     dispatch(getCourse(courseId));
   }, [dispatch]);
   const { course } = useSelector((state) => state.course);
-
 
   const accordion = [
     {
@@ -43,18 +43,7 @@ const CourseDetails = () => {
 
   return (
     <>
-      <div className="course-header">
-        <h1> Course Details</h1>
-        <div className="course-header-nav">
-          <span>
-            <Link to="/course">Course</Link>
-          </span>
-          <span>
-            <small>&#8250;</small>
-          </span>
-          <span> Course Details</span>
-        </div>
-      </div>
+      <Header link={"courses"} to={"courses"} title={"Course Details"} />
       {course && (
         <div className="course-details">
           <div className="course-details-deshboard">

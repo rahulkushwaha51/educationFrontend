@@ -2,16 +2,11 @@ import React from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
 import img from "../assets/about.png";
+import Header from "../general/Header";
 const About = () => {
   return (
     <div>
-      <div className="header">
-        <h1> About Us</h1>
-        <span>
-          {" "}
-          <Link to="/">Home</Link> <small>&#8250;</small> About Us
-        </span>
-      </div>
+   <Header link={"Home"} to={""} title={"About Us"} />
       <div className="about-container">
         <div className="about-section">
           <h2 className="about-heading">About Gs Academy</h2>

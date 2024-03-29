@@ -20,7 +20,7 @@ const PaymentSuccess = lazy(() =>
   import("./component/payments/PaymentSuccess")
 );
 const Paymentfail = lazy(() => import("./component/payments/Paymentfail"));
-const PageNotfound = lazy(() => import("./PageNotfound"));
+const PageNotfound = lazy(() => import("./component/general/PageNotfound"));
 const Contact = lazy(() => import("./component/contact/Contact"));
 const Request = lazy(() => import("./component/contact/Request"));
 const CourseDetails = lazy(() => import("./component/courses/CourseDetails"));

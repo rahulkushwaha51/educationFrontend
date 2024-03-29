@@ -1,28 +1,8 @@
 .course-header {
-    background-color: rgba(13, 14, 13, 0.662);
-    background-image: url(../assets/coursepageimage.jpg);
-    background-blend-mode: multiply;
-    background-size: cover;
     width: 100%;
     padding: 8rem 2rem;
     color: white;
 }
-
-.course-header h1 {
-    font-size: 3rem;
-    padding: 2rem 0;
-}
-
-.course-header-nav {
-    display: flex;
-    align-items: center;
-}
-
-.course-header-nav small {
-    font-size: 1.8rem;
-    padding: 0 0.3rem;
-}
-
 .course-details {
     min-height: 100%;
     max-width: 100%;

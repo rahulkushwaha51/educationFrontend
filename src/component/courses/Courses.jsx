@@ -7,9 +7,9 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import CourseCard from "./CourseCard";
 import Loader from "../loader/Loader";
-import { CiStar } from "react-icons/ci";
-import { FaFilter, FaRegStar } from "react-icons/fa";
+import { FaFilter, FaStar } from "react-icons/fa";
 import { addToCart } from "../../redux/actions/cartAction";
+import Header from "../general/Header";
 
 const Courses = () => {
   const [keyword, setKeyword] = useState("");
@@ -79,13 +79,7 @@ const Courses = () => {
 
   return (
     <div className="course-container">
-      <div className="header">
-        <h1> Courses</h1>
-        <span>
-          {" "}
-          <Link to="/">Home</Link> <small>&#8250;</small> Courses
-        </span>
-      </div>
+     <Header link={"home"} to={""}  title={"Courses"} />
       <div className="search">
         <h1>
           {" "}
@@ -149,9 +143,9 @@ const Courses = () => {
                   />
                   <span className="checkmark"></span>
                   <div key={index} className="star">
-                    {Array.from({ length: item }, (_, starIndex) => (
-                      <span key={starIndex} className="icon">
-                        <CiStar size={"1.5rem"} />
+                    {Array.from({ length:item}, (_, starIndex) => (
+                      <span key={starIndex}>
+                        <FaStar size={20} className="icon"/>
                       </span>
                     ))}
                   </div>

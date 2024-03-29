@@ -102,7 +102,7 @@
   padding: 1rem 2rem;
 }
 
-.course-level {
+.course-level-profile {
   /* position: absolute; */
   padding: .5rem 0;
   display: flex;
@@ -115,7 +115,7 @@
  
 }
 
-.course-level span {
+.course-level-profile span {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -202,7 +202,7 @@
     padding: .2rem 1rem;
   }
 
-  .course-level {
+  .course-level-profile {
     position: relative;
     padding: 1rem 1rem 0;
   }

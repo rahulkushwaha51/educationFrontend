@@ -5,6 +5,7 @@ import { contactUs } from "../../redux/actions/otherAction";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { Locate, Mail, MapPin, Phone } from "lucide-react";
+import Header from "../general/Header";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,13 +27,7 @@ const Contact = () => {
   };
   return (
     <div id="contact">
-      <div className="header">
-        <h1> Contact Us</h1>
-        <span>
-          {" "}
-          <Link to="/">Home</Link> <small>&#8250;</small> Contact Us
-        </span>
-      </div>
+   <Header link={"Home"} to={""} title={"Contact Us"} />
       <div className="contact">
         <div className="contact-form">
           <h2>Contact Us!</h2>

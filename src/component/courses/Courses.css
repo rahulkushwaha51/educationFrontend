@@ -176,25 +176,29 @@
 
 .star {
     display: flex;
+    align-items: center;
+    gap: .5rem;
+    /* justify-content: flex-start; */
 }
 
-.icon svg {
-    fill: rgb(7, 96, 169);
-    stroke-width: 2rem;
-    stroke: rgb(14, 195, 123);
+.icon {
+    all: unset;
+    fill: rgb(255, 179, 19);
+    padding-top: .2rem;
 }
+
 
 .course-card {
     /* position: absolute; */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-
+    gap: 2rem;
 }
 
 .course-card-row {
-    flex: 0 0 auto;
-    width: 33.33%;
+    /* flex: 0 0 auto; */
+    padding: 0 .5rem;
 }
 
 @media (max-width: 768px) {

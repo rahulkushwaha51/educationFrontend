@@ -18,22 +18,23 @@ const CourseCard = ({
     <>
       <div className="course-card-container">
         <div className="thecard">
-          <div className="front-card">
-            <img src={image} alt="thumbnail" className="course-img" />
-            <div className="course-price">
-              <span>&#8377;{price}</span>
-              {/* <span>2999&#8377;</span> */}
+          <Link to={`/coursedetails/${courseId}`}>
+            <div className="front-card">
+              <img src={image} alt="thumbnail" className="course-img" />
+              <div className="course-price">
+                <span>&#8377;{price}</span>
+              </div>
+              <h1 className="title cutoff-text">{title}</h1>
+              <div className="course-level">
+                <span>
+                  <FaClock /> {duration} month{" "}
+                </span>
+                <span>
+                  <GiNetworkBars /> {level}{" "}
+                </span>
+              </div>
             </div>
-            <h1 className="title cutoff-text">{title}</h1>
-            <div className="course-level">
-              <span>
-                <FaClock /> {duration} month{" "}
-              </span>
-              <span>
-                <GiNetworkBars /> {level}{" "}
-              </span>
-            </div>
-          </div>
+          </Link>
           <div className="back-card">
             <div className="course-info-card">
               <span>{category}</span>

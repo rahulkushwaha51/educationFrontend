@@ -53,7 +53,8 @@ body {
     background-color: rgba(13, 14, 13, 0.724);
     background-image: url("./component/assets/coursepageimage.jpg");
     background-blend-mode: multiply;
-    object-fit: cover;
+    object-fit:contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -67,10 +68,11 @@ body {
     color: white;
 }
 
-.header small {
-    font-size: 1.3rem;
-
+.arrow::before {
+    content: "\276F";
+    padding: 0 .4rem;
 }
+
 
 h2 {
     font-weight: bold;
@@ -81,12 +83,16 @@ h1 {
     font-weight: bold;
 }
 
+a {
+    text-transform: capitalize;
+}
+
 /* input{
     background-color: var(--background-color-body);
 } */
 
 @media (max-width:720px) {
     .header {
-        padding-left: 2rem;
+        background-size: cover;
     }
 }
