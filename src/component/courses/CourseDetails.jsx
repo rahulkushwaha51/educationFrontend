@@ -22,7 +22,6 @@ const CourseDetails = () => {
   }, [dispatch]);
   const { course } = useSelector((state) => state.course);
 
-  console.log(course);
 
   const accordion = [
     {

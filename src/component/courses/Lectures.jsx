@@ -39,19 +39,18 @@ const Lectures = ({ user }) => {
 
   return (
     <>
-      {lectures.length !== 0 && (
+      {lectures && lectures.length !== 0 && (
         <div className="lecture-container">
           <div className="lectures">
-            {lectures &&
-              lectures.map((item, index) => (
-                <button
-                  className="lecture-button"
-                  key={item._id}
-                  onClick={() => setLectureNumber(index)}
-                >
-                  {index + 1} {item.title}
-                </button>
-              ))}
+            {lectures.map((item, index) => (
+              <button
+                className="lecture-button"
+                key={item._id}
+                onClick={() => setLectureNumber(index)}
+              >
+                {index + 1} {item.title}
+              </button>
+            ))}
           </div>
           {lectures[lectureNumber] && (
             <div className="video-container">

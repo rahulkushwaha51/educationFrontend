@@ -66,9 +66,11 @@ const Login = () => {
             onChange={handleChange}
           />
 
-          <button type="submit" className="btn-primary">Login</button>
+          <button loading={loading} type="submit" className="btn-primary">
+            Login
+          </button>
           <div className="login-action">
-          <p>
+            <p>
               Not a member?
               <Link to="/signup" className="signup-link">
                 {" "}
@@ -81,7 +83,6 @@ const Login = () => {
                 Forgot Password?
               </Link>
             </p>
-            
           </div>
         </form>
       </div>

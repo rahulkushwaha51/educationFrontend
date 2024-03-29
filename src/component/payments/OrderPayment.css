@@ -1,6 +1,6 @@
 .payment-card {
     min-height: 20rem;
-    width: fit-content;
+    width: max-content;
     margin: auto;
     background-color: aliceblue;
     text-align: center;

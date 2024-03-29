@@ -14,20 +14,20 @@ const Cart = () => {
     const dispatch = useDispatch();
 
   
-
-    const handleCheckout = async (e,amount, orderId) => {
+// console.log(order)
+    const handleCheckout = async (e,amount) => {
         e.preventDefault();
         await dispatch(checkout(amount));
+        console.log(order.id)
         const { data } = await axios.get(`${server}/razorpaykey`);
         setKey(data.key)
-        console.log(amount)
         const options = {
             key,
             amount: amount,
             currency: "INR",
             name: "Eduman",
             description: "Eduman Course ",
-            order_id: orderId,
+            order_id: order.id,
             callback_url: `${server}/paymentvalidation`,
             prefill: {
                 name: user.name,
@@ -112,7 +112,7 @@ const Cart = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <button className="btn-primary cart-button" onClick={(e) => handleCheckout(e,cart.price, order.id)}>Checkout</button>
+                    <button className="btn-primary cart-button" onClick={(e) => handleCheckout(e,cart.price)}>Checkout</button>
                 </div>
             ) : (
                 <h2>Cart is Empty</h2>

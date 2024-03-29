@@ -1,0 +1,36 @@
+.admin-courses-container {
+    display: flex;
+  }
+  
+  .courses-list {
+    padding: 8px;
+  }
+  
+  .courses-heading {
+    text-transform: uppercase;
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .courses-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .courses-table caption {
+    caption-side: top;
+  }
+  
+  .courses-table th, .courses-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .courses-table th {
+    text-align: left;
+  }
+  
+  .action-buttons button {
+    margin-right: 8px;
+  }
+  

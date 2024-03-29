@@ -69,7 +69,6 @@ const Courses = () => {
 
   const HandleSearch = (e) => {
     e.preventdefault;
-    console.log(keyword);
     dispatch(getAllCourses(category, keyword, price, rating));
 
     setKeyword("");
@@ -184,8 +183,7 @@ const Courses = () => {
           </div>
         </div>
         <div className="course-card">
-          {courses.length > 0 ? (
-            courses &&
+          {courses && courses.length > 0 ? (
             courses.map((item) => (
               <div key={item._id} className="course-card-row">
                 <CourseCard
