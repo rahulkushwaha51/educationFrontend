@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { RiCheckboxCircleFill } from "react-icons/ri";
 import { Link, useSearchParams } from "react-router-dom";

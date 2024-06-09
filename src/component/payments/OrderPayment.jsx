@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {useEffect } from 'react'
 import "./OrderPayment.css"
 import { useDispatch } from 'react-redux'
@@ -8,11 +9,11 @@ import { placeOrder } from '../../redux/actions/cartAction'
 const OrderPayment = () => {
     const reference = useSearchParams()[0].get('reference')
     const dispatch = useDispatch()
-    useEffect(() => {
-        if (reference) {
-            dispatch(placeOrder())
-        }
-    }, [dispatch]);
+    // useEffect(() => {
+    //     if (reference) {
+    //         // dispatch(placeOrder())
+    //     }
+    // }, [dispatch]);
 
     return (
         <div className='payment-card'>

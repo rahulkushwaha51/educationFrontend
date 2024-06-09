@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect} from "react";
 // import ImageSlider from "./ImageSlider"
 import "./Home.css";
 // import Loader from "../loader/loader";
@@ -9,6 +9,8 @@ import { getTop3Courses } from "../../redux/actions/courseAction";
 import { FaTv } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
+
+
 const Home = () => {
   const dispatch = useDispatch();
   const { ref, inView } = useInView();
@@ -17,6 +19,8 @@ const Home = () => {
   }, [dispatch]);
 
   const { top3courses } = useSelector((state) => state.course);
+
+  
 
   return (
     <>
@@ -28,12 +32,14 @@ const Home = () => {
           <Link to="/courses" className="btn-primary">
             Courses
           </Link>
-          {/* <h3>Learn With Our World Class Courses</h3> */}
+          {/* <h3>Learn With Our World Class Courses</h3>
+          <h3>{variable}</h3> */}
         </div>
       </div>
       <div ref={ref} className={`home-intro ${inView ? "active" : ""}`}>
         <h2>Welcome to Gs Academy Education Online Platform</h2>
         <p>
+
           Gs Academy helps you to develop essential education and your career of
           years experiences. Transform your life through education to make the
           most of each semester to choose the best major. Prepare for grad

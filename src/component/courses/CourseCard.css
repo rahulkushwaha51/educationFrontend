@@ -29,13 +29,15 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    border-radius: 4px;
     background-color: var(--background-color-primary);
+    box-shadow: 0 0 1px rgb(191, 179, 179);
 }
 
 .back-card {
     visibility: hidden;
     width: 20rem;
-    min-height: 25rem;
+    min-height: max-content;
     padding: 1rem 2rem;
     border-radius: 5px;
     z-index: 2;
@@ -50,7 +52,7 @@
 .course-price {
     display: flex;
     gap: 0.5rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
     font-size: 1.2rem;
 }
 
@@ -85,6 +87,7 @@
     align-items: flex-end;
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
+    font-weight: 300;
     /* border-top: 1px solid rgba(113, 108, 108, 0.404); */
     margin-top: auto;
 }
@@ -92,6 +95,7 @@
 .course-level span {
     display: flex;
     align-items: center;
+    font-weight: 300;
     gap: 0.5rem;
 }
 
@@ -134,12 +138,10 @@
 }
 
 .course-card-action {
-    position: absolute;
-    bottom: 1rem;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    /* padding: 0 0.5rem; */
+    padding:  0.5rem 0;
 }
 
 .point {

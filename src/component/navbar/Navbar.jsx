@@ -80,7 +80,7 @@ const Navbar = ({ isAuthenticated, user }) => {
               <li>
                 {user && user.role === "admin" && (
                   <Link to="/admin/dashboard">
-                    <button className="btn-primary">Dashboard</button>
+                    <button className="btn">Dashboard</button>
                   </Link>
                 )}
               </li>

@@ -5,10 +5,17 @@ import courseReducer from "./reducers/courseReducer";
 import subscriptionReducer from "./reducers/subscriptionReducer";
 import adminReducer from "./reducers/adminReducer";
 import otherReducer from "./reducers/otherReducer";
-import { persistReducer, persistStore } from "redux-persist";
+import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import cartReducer from "./reducers/cartReducer";
-export const server = 'http://localhost:5000/api/v1';
+
+// import process from 'dotenv'
+
+// const url = import.meta.env.VITE_SERVER_URL
+
+// export const server = `${url}/api/v1`;
+export const server = `http://localhost:5000/api/v1`;
+// export const server = `https://gsacademyback.onrender.com/api/v1`;
 
 const rootReducer = combineReducers({
     user: userReducer,
@@ -28,6 +35,12 @@ const persistConfig = ({
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 const store = configureStore({
     reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+          serializableCheck: {
+            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+          },
+        }),
 })
 
 export const persistor = persistStore(store)
